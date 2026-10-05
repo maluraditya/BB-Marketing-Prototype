@@ -1,4 +1,8 @@
 .app-main{width:auto;flex:1;min-width:0}
-.page-content{min-width:0}
+.page-content{min-width:0;width:100%;max-width:100%;overflow-x:hidden}
+.kpi-grid{grid-template-columns:minmax(0,1.25fr) repeat(3,minmax(0,1fr))}
+.chart-grid{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+.kpi-grid>* , .chart-grid>* , .grid-two>*{min-width:0}
+@media(max-width:1150px){.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.chart-grid{grid-template-columns:minmax(0,1fr)}}
 .workspace-switch{position:sticky;top:0;z-index:20}
 body:has(.workspace-switch) [data-slot="sidebar-container"]{top:55px;height:calc(100svh - 55px)}
